@@ -7,8 +7,9 @@
     public $genre;
     public $original_language;
     public $length;
+    public $plot;
 
-    public function __construct($title, $director, $year, $genre, $original_language, $length)
+    public function __construct($title, $director, $year, $genre, $original_language, $length, $plot)
     {
         $this->title = $title;
         $this->director = $director;
@@ -16,6 +17,7 @@
         $this->genre = $genre;
         $this->original_language = $original_language;
         $this->length = $length;
+        $this->plot = $plot;
     }
 
     public function getTitle()
@@ -41,5 +43,10 @@
     public function getLength()
     {
         return $this->length;
+    }
+
+    public function getAbstract()
+    {
+        return substr($this->plot, 0, 70) . '...';
     }
 }
