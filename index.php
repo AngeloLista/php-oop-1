@@ -7,30 +7,25 @@ class Movie
     public $genre;
     public $original_language;
     public $length;
+
+    public function __construct($title, $director, $year, $genre, $original_language, $length)
+    {
+        $this->title = $title;
+        $this->director = $director;
+        $this->year = $year;
+        $this->genre = $genre;
+        $this->original_language = $original_language;
+        $this->length = $length;
+    }
 }
 
 
-$movie1 = new Movie();
-$movie1->title = "The Hunger Games";
-$movie1->director = "Gary Ross";
-$movie1->year = "2012";
-$movie1->genre = "Azione/Sci-fi";
-$movie1->original_language = "Inglese";
-$movie1->length = 142;
+$movie1 = new Movie("The Hunger Games", "Gary Ross", "2012", "Azione/Sci-fi", "Inglese", 142);
 
 
-$movie2 = new Movie();
-$movie2->title = "Joker";
-$movie2->director = "Todd Phillips";
-$movie2->year = "2019";
-$movie2->genre = "Drammatico/Giallo";
-$movie2->original_language = "Inglese";
-$movie2->length = 122;
+$movie2 = new Movie("Joker", "Todd Phillips", "2019", "Drammatico/Giallo", "Inglese", 122);
 
-$movie3 = new Movie();
-$movie3->title = "Il Signore degli Anelli: La Compagnia dell'Anello";
-$movie3->director = "Peter Jackson";
-$movie3->year = "2001";
-$movie3->genre = "Fantasy/Avventura";
-$movie3->original_language = "Inglese";
-$movie3->length = 178;
+$movie3 = new Movie("Il Signore degli Anelli: La Compagnia dell'Anello", "Peter Jackson", "2001", "Fantasy/Avventura", "Inglese", 178);
+
+
+var_dump($movie3);
