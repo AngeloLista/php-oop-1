@@ -19,6 +19,7 @@ include __DIR__ . "/models/Movie.php";
 <body>
     <main>
         <?php foreach ($movies as $movie) :
+            // Dynamic obj creation
             $movie_obj = new Movie($movie['title'], $movie['director'], $movie['year'], $movie['genre'], $movie['original_language'], $movie['length'], $movie['plot']);
         ?>
             <section id="movie1">
